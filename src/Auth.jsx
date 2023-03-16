@@ -4,14 +4,19 @@ import axios from "axios";
 const AuthContext = React.createContext({currentUser: {uid: "noAuth"}});
 
 const AuthProvider = ({children}) =>{
-    const [currentUser, setCurrentUser] = useState(null);
+    const [currentUser, setCurrentUser] = useState({currentUser: {uid: "noAuth"}});
     const [pending, setPending] = useState(true);
 
     // const provider = new firebase.auth.GoogleAuthProvider();
     useEffect(() => {
         //Do Auth Stuff Here
         setCurrentUser({uid: "123456"});
+        setPending(false);
     }, []);
+
+    if(pending){
+        return <p>Loading</p>;
+    }
 
     return (
         <AuthContext.Provider value={{currentUser}}>

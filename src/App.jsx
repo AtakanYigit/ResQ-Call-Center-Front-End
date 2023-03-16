@@ -1,9 +1,11 @@
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import SignInPage     from "./Pages/SignInPage/SignInPage";
-import WorkPage       from "./Pages/WorkPage/WorkPage"
-import PrivateRoute   from "./PrivateRoute";
-import {AuthProvider} from "./Auth";
-import './App.scss'
+import ForgotPasswordPage from "./Pages/ForgotPasswordPage/ForgotPasswordPage";
+import SignInPage         from "./Pages/SignInPage/SignInPage";
+import WorkPage           from "./Pages/WorkPage/WorkPage"
+import PrivateRoute       from "./PrivateRoute";
+import {AuthProvider}     from "./Auth";
+import "./App.scss"
+import "./Reset.scss"
 
 const App = () => {
     return (
@@ -11,8 +13,9 @@ const App = () => {
             <Router>
                 <div className = "App">
                     <Switch>
-                        <PrivateRoute path = "/SignIn" exact component = {SignInPage}/>
-                        <PrivateRoute path = "/"       exact component = {WorkPage}/>
+                        <Route path = "/ForgotPassword" exact component = {ForgotPasswordPage}/>
+                        <PrivateRoute path = "/SignIn"  exact component = {SignInPage}/>
+                        <PrivateRoute path = "/"        exact component = {WorkPage}/>
                     </Switch>
                 </div>
             </Router>
