@@ -3,7 +3,7 @@ This is the repository of our emergency help application's call center side fron
 ---
 Complete project is built by:
 - Atakan Yiğit Çengeloğlu   https://github.com/AtakanYigit
-- Melih Sahtiyan            https://github.com/melihsahtiyan?tab=repositories
+- Melih Sahtiyan            https://github.com/melihsahtiyan
 - Burak Tırman              https://github.com/buraktirman
 - Edvin Davulcu             https://github.com/CentEDO
 ---
