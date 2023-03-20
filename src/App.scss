@@ -2,6 +2,8 @@
     // --lightGrey:                #CED2F0;
     --gray:                     #9c9c9c;
     --red:                      #F90100;
+    --red-wo:                   #ffbebe;
+    --pure-black:               #000000;
     --black:                    #121212;
     --pure-white:               #FFFFFF;
     --white:                    #FBFBFB;
@@ -33,22 +35,22 @@ html, body, .App, #root{
 
 ::-webkit-scrollbar{
     width:                      8px;
-    /* box-shadow:             inset 0 10px 10px 10px var(--purple); */
+    box-shadow:             inset 0 10px 10px 10px var(--pure-white);
 }
 
 ::-webkit-scrollbar-track{
-    /* box-shadow:             inset 0 10px 10px 10px var(--purple); */
+    box-shadow:             inset 0 10px 10px 10px var(--pure-white);
 }
   
 ::-webkit-scrollbar-thumb{    
     border-radius:              50px;
-    box-shadow:                 inset 0 10px 10px 10px #9ba5ff;
+    box-shadow:                 inset 0 10px 10px 10px var(--red-wo);
     border:                     solid 1px transparent;
 }
   
 ::-webkit-scrollbar-thumb:hover{
     border-radius:              50px;
-    box-shadow:                 inset 0 10px 10px 10px #7a87ff;
+    box-shadow:                 inset 0 10px 10px 10px var(--red);
     border:                     solid 1px transparent;
 }
 

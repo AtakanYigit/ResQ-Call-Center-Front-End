@@ -13,9 +13,9 @@ const App = () => {
             <Router>
                 <div className = "App">
                     <Switch>
-                        <Route path = "/ForgotPassword" exact component = {ForgotPasswordPage}/>
-                        <PrivateRoute path = "/SignIn"  exact component = {SignInPage}/>
-                        <PrivateRoute path = "/"        exact component = {WorkPage}/>
+                        <PrivateRoute path = "/"               exact component = {WorkPage}/>
+                        <PrivateRoute path = "/SignIn"         exact component = {SignInPage}/>
+                        <Route        path = "/ForgotPassword" exact component = {ForgotPasswordPage}/>
                     </Switch>
                 </div>
             </Router>
@@ -23,4 +23,4 @@ const App = () => {
     )
 }
 
-export default App
+export default App;
