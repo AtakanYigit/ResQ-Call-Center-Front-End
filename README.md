@@ -27,5 +27,4 @@ Technologies Used In This Project
 ---
 Other Repositories For This Project
 - Mobile App (React-Native) https://github.com/melihsahtiyan/Emergency-Application-React-Native
-- Back-End (C#)             https://github.com/melihsahtiyan/EmergencyApplicationClassicArch
-- Back-End CQRS (C#)        https://github.com/melihsahtiyan/EmergencyApplicationCQRS
+- Back-End   (C#)           https://github.com/melihsahtiyan/EmergencyApplicationClassicArch
