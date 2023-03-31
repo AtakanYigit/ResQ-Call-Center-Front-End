@@ -24,6 +24,16 @@ Technologies Used In This Project
 - React Native
 - SCSS
 - C# (.NET)
+- Microsoft Sql Server
+- Google Cloud
+---
+## Installation
+
+To install the application, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Run `npm install` to install the required dependencies.
+3. Run `npm run dev` to start the application.
 ---
 Other Repositories For This Project
 - Mobile App (React-Native) https://github.com/melihsahtiyan/emergency-app-mobile
