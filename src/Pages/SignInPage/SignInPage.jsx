@@ -1,7 +1,7 @@
 import axios from "axios"
 import {Link} from "react-router-dom"
 import Background from "../../Assets/BG.png"
-import Logo from "../../Assets/Logo.png"
+import Logo from "../../Assets/Logo.svg"
 import Conf from "../../Configurations"
 import "./SignInPage.scss"
 
