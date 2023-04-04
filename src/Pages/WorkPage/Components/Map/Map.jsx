@@ -44,7 +44,7 @@ const Map = () => {
         <div className = "map">
             {/* {mapReady && <Info buttonAction={updateCoordinates} coordinates={coordinates} mapBounds={mapBounds} />} */}
             <div className="map-container">
-                <GoogleMap apiKey            = "AIzaSyDumKKwXsthyT9oNA9DRtur4Iln2AHwtk4"
+                <GoogleMap apiKey            = {GOOGLE_MAPS_API_KEY}
                            defaultCenter     = {{ lat: 45.4046987, lng: 12.2472504 }}
                            defaultZoom       = {7}
                            options           = {mapOptions}
