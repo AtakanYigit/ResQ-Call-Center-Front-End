@@ -53,6 +53,6 @@ Other Repositories For This Project
 
 #### Call Center:
 
-![Staff Sign In](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/56ea0061-853b-415f-8e80-a519aa27a146)
+![Staff Sign In](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/3d881630-de1e-47c5-8c20-51e0c55e42e2)
 
 ![Staff Home](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/17f7f963-0ebe-4f78-a495-fda1416c46d0)
