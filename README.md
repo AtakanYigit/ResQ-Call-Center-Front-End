@@ -42,7 +42,8 @@ Other Repositories For This Project
 ---
 ## Screenshots
 
-App:
+####App:
+
 ![Sign In](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/ced59a21-e654-4d46-9fa9-24d6595ee418)
 ![Home](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/0d3a7141-f740-48b7-918b-38f7eaecf2b2)
 ![Emergency Type](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/a29b8fa2-e727-4aa9-9fa0-91d597cf3116)
@@ -50,6 +51,7 @@ App:
 ![Contacts](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/16d5fbda-76a7-4648-bc67-0a84568a7178)
 ![Profile](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/518ce702-ce75-4143-9789-ece520ba4616)
 
-Call Center:
+####Call Center:
+
 ![Staff Sign In](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/56ea0061-853b-415f-8e80-a519aa27a146)
 ![Staff Home](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/17f7f963-0ebe-4f78-a495-fda1416c46d0)
