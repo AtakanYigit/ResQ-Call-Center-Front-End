@@ -49,7 +49,7 @@ Other Repositories For This Project
 ![Emergency Type](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/f3e06aba-5822-40f1-9e57-b4ec8879784e)
 ![Options](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/7b2e8718-2b43-40ff-82e9-97fb203a858e)
 ![Contacts](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/16d5fbda-76a7-4648-bc67-0a84568a7178)
-![Profile](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/518ce702-ce75-4143-9789-ece520ba4616)
+![Profile](https://github.com/AtakanYigit/ResQ-Call-Center-Front-End/assets/65567037/8448cc48-57e2-4e80-ac29-af16ebfc2144)
 
 #### Call Center:
 
