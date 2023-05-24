@@ -1,7 +1,7 @@
 import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import ForgotPasswordPage from "./Pages/ForgotPasswordPage/ForgotPasswordPage";
 import SignInPage         from "./Pages/SignInPage/SignInPage";
-import WorkPage           from "./Pages/WorkPage/WorkPage"
+// import WorkPage           from "./Pages/WorkPage/WorkPage"
 import PrivateRoute       from "./PrivateRoute";
 import {AuthProvider}     from "./Auth";
 import "./App.scss"
@@ -13,9 +13,9 @@ const App = () => {
             <Router>
                 <div className = "App">
                     <Switch>
-                        <PrivateRoute path = "/"               exact component = {WorkPage}/>
-                        <PrivateRoute path = "/SignIn"         exact component = {SignInPage}/>
-                        <Route        path = "/ForgotPassword" exact component = {ForgotPasswordPage}/>
+                        <Route path = "/ForgotPassword" exact component = {ForgotPasswordPage}/>
+                        <PrivateRoute path = "/SignIn"  exact component = {SignInPage}/>
+                        {/* <PrivateRoute path = "/"        exact component = {WorkPage}/> */}
                     </Switch>
                 </div>
             </Router>
@@ -23,4 +23,4 @@ const App = () => {
     )
 }
 
-export default App;
+export default App
