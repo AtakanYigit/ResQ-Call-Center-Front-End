@@ -1,7 +1,10 @@
+const domain = "http://13.48.13.201:5000/api";
+
 const Configurations = {
-    signIn: "http://localhost:5000/api/v1/auth/signin",
-    forgotPassword: "http://localhost:5000/api/v1/auth/forgotPassword",
-    logout: "http://localhost:5000/api/v1/auth/logout",
+    signIn:         `${domain}/Auth/signin`,
+    forgotPassword: `${domain}/Auth/forgotPassword`,
+    logout:         `${domain}/Auth/logout`,
+    getEmergencies: `${domain}/Emergencies`,
 }
 
 export default Configurations;

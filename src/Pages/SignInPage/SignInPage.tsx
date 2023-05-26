@@ -6,11 +6,14 @@ import Conf from "../../Configurations"
 import "./SignInPage.scss"
 
 const SignInPage = () =>{
-    const signInHandler = (e) =>{
+    const signInHandler = (e: React.FormEvent<HTMLFormElement>): void =>{
         e.preventDefault();
+        const emailInput = e.currentTarget[0] as HTMLInputElement;
+        const passwordInput = e.currentTarget[1] as HTMLInputElement;
+    
         axios.post(Conf.signIn, {
-            email: e.target[0].value,
-            password: e.target[1].value
+            email: emailInput.value,
+            password: passwordInput.value
         }).then(res => {
             if(res.data.status === "success"){
                 localStorage.setItem("token", res.data.token)

@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
-import axios from "axios";
+// import axios from "axios";
 
 interface User {
-    uid: string;
+    uid: string | null;
 }
 
 interface AuthContextType {
@@ -12,13 +12,13 @@ interface AuthContextType {
 const AuthContext = React.createContext<AuthContextType>({currentUser: {uid: "noAuth"}});
 
 const AuthProvider: React.FC<{ children: React.ReactNode }> = ({children}) => {
-    const [currentUser, setCurrentUser] = useState<User>({ uid: "noAuth" });
+    const [currentUser, setCurrentUser] = useState<User>({ uid: null });
     const [pending, setPending] = useState(true);
 
     // const provider = new firebase.auth.GoogleAuthProvider();
     useEffect(() => {
         //Do Auth Stuff Here
-        setCurrentUser({uid: "123456"});
+        setCurrentUser({uid: null});
         setPending(false);
     }, []);
 
