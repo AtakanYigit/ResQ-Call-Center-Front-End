@@ -2,6 +2,7 @@ import {useRef, useState, useEffect} from "react";
 import GoogleMap  from "google-maps-react-markers";
 import Marker     from "./Marker";
 import mapOptions from "./mapoptions.json";
+import Sidebar    from "../../Components/Sidebar";
 import "./WorkPage.scss";
 
 const WorkPage: React.FC = () => {
@@ -47,10 +48,7 @@ const WorkPage: React.FC = () => {
 
     return (
         <div className = "workPage">
-            <div className = "sideBar">
-
-            </div>
-            {mapReady && <div>Map is ready. See for logs in developer console.</div>}
+            <Sidebar/>
             <GoogleMap apiKey            = ""
                        defaultCenter     = {{ lat: 45.4046987, lng: 12.2472504 }}
                        defaultZoom       = {5}

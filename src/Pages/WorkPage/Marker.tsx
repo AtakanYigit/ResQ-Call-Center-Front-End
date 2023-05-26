@@ -13,8 +13,8 @@ const Marker: React.FC<MarkerProps> = ({className, lat, lng, markerId, onClick})
 	return (
 		<img className = {className}
 			 src       = {MarkerIcon}
-			 lat       = {lat}
-			 lng       = {lng}
+			//  lat       = {lat}
+			//  lng       = {lng}
 			 onClick   = {(e) => (onClick ? onClick(e, { markerId, lat, lng }) : null)}
 			 style     = {{ cursor: 'pointer', fontSize: 40 }}
 			 alt       = {markerId}/>
