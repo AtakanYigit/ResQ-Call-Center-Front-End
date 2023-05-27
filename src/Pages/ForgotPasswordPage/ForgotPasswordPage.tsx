@@ -8,8 +8,8 @@ const ForgotPasswordPage = () => {
         <div className = "forgotPassword">
             <form className = "signInContainer">
                 <h1>Forgot Password?</h1>
-                <input type="email"    placeholder = "E-mail"   required/>
-                <input type="submit"   value = "Reset Password"/>
+                <input type = "text"   placeholder = "Staff Number" required/>
+                <input type = "submit" value       = "Reset Password"/>
                 <Link to = "/SignIn">Go Back</Link>
             </form>
             <div className = "imageContainer" style = {{backgroundImage: `url(${Background})`, backgroundPosition: "center", backgroundSize: "cover", backgroundRepeat: "no-repeat"}}>

@@ -1,24 +1,11 @@
+import {PostInterface} from "../Pages/WorkPage/WorkPage";
 import "./Post.scss";
 
 interface PostProps {
-    post: Post;
+    post: PostInterface;
 }
 
-interface Post {
-    id: number;
-    name: string;
-    age: number;
-    gender: string;
-    height: string;
-    bloodType: string;
-    emergencyType: string;
-    allergies: string[];
-    ongoingDiseases: string[];
-    resourses: string[];
-    location: {lat: number, lng: number};
-}
-
-const Post: React.FC<PostProps> = ({ post }) => {
+const Post: React.FC<PostProps> = ({post}) => {
     const sendTeam = () => {
         alert("Team Sent!");
     };
@@ -60,8 +47,8 @@ const Post: React.FC<PostProps> = ({ post }) => {
                 <div className = "allergiesDiseasesSubContainer">
                     <h6>Allergies</h6>
                     <div className = "allergiesDiseases">
-                        {post.allergies.map((allergy) => (
-                            <p className = "allergyDisease">{allergy}</p>
+                        {post.allergies.map((allergy,index) => (
+                            <p key = {index} className = "allergyDisease">{allergy}</p>
                         ))}
 
                         {post.allergies.length === 0 && (
@@ -73,8 +60,8 @@ const Post: React.FC<PostProps> = ({ post }) => {
                 <div className = "allergiesDiseasesSubContainer">
                     <h6>Ongoing Diseases</h6>
                     <div className = "allergiesDiseases">
-                        {post.ongoingDiseases.map((allergy) => (
-                            <p className = "allergyDisease">{allergy}</p>
+                        {post.ongoingDiseases.map((disease, index) => (
+                            <p key = {index} className = "allergyDisease">{disease}</p>
                         ))}
 
                         {post.ongoingDiseases.length === 0 && (
@@ -87,8 +74,8 @@ const Post: React.FC<PostProps> = ({ post }) => {
             <div className = "resourcesContainer">
                 <h6>Resources</h6>
                 <div className = "resources">
-                    {post.resourses.map((resource) => (
-                        <img src = {resource} className = "resource" alt="" />
+                    {post.resourses.map((resource, index) => (
+                        <img key = {index} src = {resource} className = "resource" alt="" />
                     ))}
                 </div>
             </div>

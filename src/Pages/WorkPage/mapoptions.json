@@ -1,13 +1,13 @@
 {
-	"mapTypeControl": true,
-	"fullscreenControl": false,
-	"maxZoom": 20,
-	"minZoom": 3,
-	"rotateControl": true,
-	"scaleControl": false,
-	"streetViewControl": true,
-	"mapTypeId": "roadmap",
-	"zoomControl": true,
+	"mapTypeControl":       true,
+	"fullscreenControl":    false,
+	"maxZoom":              20,
+	"minZoom":              9,
+	"rotateControl":        true,
+	"scaleControl":         false,
+	"streetViewControl":    true,
+	"mapTypeId":            "roadmap",
+	"zoomControl":          true,
 	"styles": [
 		{
 			"featureType": "water",
