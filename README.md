@@ -64,8 +64,8 @@ Other Repositories For This Project
 - Back-End   (C#)           https://github.com/melihsahtiyan/EmergencyApplicationClassicArch
 ---
 Design Files
-Light Mode: https://xd.adobe.com/view/4f2b6a71-8a48-4517-8737-0d90996ad8c1-1a78/
-Dark Mode: https://xd.adobe.com/view/9cce0795-1962-4d82-87c7-0de74f9d3e5f-c99d/
+- Light Mode: https://xd.adobe.com/view/4f2b6a71-8a48-4517-8737-0d90996ad8c1-1a78/
+- Dark Mode: https://xd.adobe.com/view/9cce0795-1962-4d82-87c7-0de74f9d3e5f-c99d/
 ---
 ## Screenshots
 
