@@ -1,27 +1,3 @@
-# Emergency Application Call Center Front-End Repo
-This is the repository of our emergency help application's call center side front-end codes.  
----
-Complete project is built by:
-- Atakan Yiğit Çengeloğlu   https://github.com/AtakanYigit
-- Melih Sahtiyan            https://github.com/melihsahtiyan
-- Burak Tırman              https://github.com/buraktirman
-- Edvin Davulcu             https://github.com/CentEDO
----
-Technologies Used In This Repository
-- React.js
-- SCSS
----
-Technologies Used In This Project
-- React.js
-- React Native
-- SCSS
-- C# (.NET)
----
-Other Repositories For This Project
-- Mobile App (React-Native) https://github.com/melihsahtiyan/Emergency-Application-React-Native
-- Back-End (C#)             https://github.com/melihsahtiyan/EmergencyApplicationProject
-- Back-End CQRS (C#)        https://github.com/melihsahtiyan/EmergencyApplicationCQRS
-
 # Emergency Application Call Center
 This is the repository of our emergency help application's call center side front-end codes.  
 ---
@@ -33,17 +9,17 @@ Introducing our revolutionary application designed to help people in times of em
 Our app's advanced technology ensures that the information provided by the user is immediately conveyed to the call center and relevant authorities who can take swift action to address the situation. This enables first responders to respond to emergencies more quickly and with greater accuracy.
 
 ---
-Complete project is built by:
+## Complete project is built by:
 - Atakan Yiğit Çengeloğlu   https://github.com/AtakanYigit
 - Melih Sahtiyan            https://github.com/melihsahtiyan
 - Burak Tırman              https://github.com/buraktirman
 - Edvin Davulcu             https://github.com/CentEDO
 ---
-Technologies Used In This Repository
+## Technologies Used In This Repository
 - React.js
 - SCSS
 ---
-Technologies Used In This Project
+## Technologies Used In This Project
 - React.js
 - React Native
 - SCSS
@@ -59,11 +35,11 @@ To install the application, follow these steps:
 2. Run `npm install` to install the required dependencies.
 3. Run `npm run dev` to start the application.
 ---
-Other Repositories For This Project
+## Other Repositories For This Project
 - Mobile App (React-Native) https://github.com/melihsahtiyan/emergency-app-mobile
 - Back-End   (C#)           https://github.com/melihsahtiyan/EmergencyApplicationClassicArch
 ---
-Design Files
+## Design Files
 - Light Mode: https://xd.adobe.com/view/4f2b6a71-8a48-4517-8737-0d90996ad8c1-1a78/
 - Dark Mode: https://xd.adobe.com/view/9cce0795-1962-4d82-87c7-0de74f9d3e5f-c99d/
 ---
