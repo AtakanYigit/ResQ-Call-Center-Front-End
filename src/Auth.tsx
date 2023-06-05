@@ -6,14 +6,12 @@ interface AuthContextType {
 
 const AuthContext = React.createContext<AuthContextType>({token: null});
 
-const AuthProvider: React.FC<{ children: React.ReactNode }> = ({children}) => {
+const AuthProvider: React.FC<{children: React.ReactNode}> = ({children}) =>{
     const [currentUser, setCurrentUser] = useState<AuthContextType>({token: null});
     const [pending,     setPending]     = useState(true);
 
     useEffect(() =>{
         const token = localStorage.getItem("token");
-        console.log(token);
-        
         setCurrentUser({token: token});
         setPending(false);
     }, []);
@@ -23,7 +21,7 @@ const AuthProvider: React.FC<{ children: React.ReactNode }> = ({children}) => {
     }
     
     return (
-        <AuthContext.Provider value={{ token: currentUser.token }}>
+        <AuthContext.Provider value = {{ token: currentUser.token }}>
             {children}
         </AuthContext.Provider>
     );

@@ -1,21 +1,19 @@
 import React      from "react";
-import MarkerIcon from "../../assets/Marker.png";
+import MarkerIcon from "../../assets/SeeOnMapIcon.png";
 
 interface MarkerProps {
     className: string;
     markerId:  string;
     lat:       number;
     lng:       number;
-    onClick:   (e: any, marker: any) => void;
+    clickHandler:   (e: any, marker: any) => void;
 }
 
-const Marker: React.FC<MarkerProps> = ({className, lat, lng, markerId, onClick}) => {
+const Marker: React.FC<MarkerProps> = ({className, lat, lng, markerId, clickHandler}) => {
 	return (
 		<img className = {className}
 			 src       = {MarkerIcon}
-			 //  lat       = {lat}
-			 //  lng       = {lng}
-			 onClick   = {(e) => (onClick ? onClick(e, { markerId, lat, lng }) : null)}
+			 onClick   = {() => (clickHandler(lat, lng))}
 			 style     = {{ cursor: 'pointer', fontSize: 40 }}
 			 alt       = {markerId}/>
 	)

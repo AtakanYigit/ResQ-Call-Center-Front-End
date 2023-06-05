@@ -48,12 +48,13 @@
     }
 
     .posts{
+        margin-top:         24px;
         display:            flex;
         flex-direction:     column;
         justify-content:    flex-start;
         align-items:        center;
         gap:                20px;
         overflow:           auto;
-        height:             92%;
+        height:             96%;
     }
 }

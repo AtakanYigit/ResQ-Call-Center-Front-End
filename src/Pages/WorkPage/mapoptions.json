@@ -2,7 +2,7 @@
 	"mapTypeControl":       true,
 	"fullscreenControl":    false,
 	"maxZoom":              20,
-	"minZoom":              9,
+	"minZoom":              6,
 	"rotateControl":        true,
 	"scaleControl":         false,
 	"streetViewControl":    true,

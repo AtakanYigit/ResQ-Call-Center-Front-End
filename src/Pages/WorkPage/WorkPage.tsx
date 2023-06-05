@@ -9,16 +9,23 @@ import "./WorkPage.scss";
 
 export interface PostInterface{
     id:              number;
-    name:            string;
     age:             number;
+    date:            string;
+    firstName:       string;
+    lastName:        string;
     gender:          string;
     height:          string;
     bloodType:       string;
-    emergencyType:   string;
+    identityNumber:  string;
+    title:           string;
+    weight:          string;
+    categoryName:    string;
     allergies:       string[];
-    ongoingDiseases: string[];
-    resourses:       string[];
-    location:        {lat: number, lng: number};
+    diseases:        string[];
+    description:     string;
+    altitude:        number;
+    longitude:       number;
+    latitude:        number;
 }
 
 interface Coordinate{
@@ -29,133 +36,63 @@ interface Coordinate{
 
 const WorkPage: React.FC = () => {
     const mapRef                                = useRef(null)
-	const [mapBounds,       setMapBounds]       = useState({})
-	const [currCoordinates, setCurrCoordinates] = useState<Coordinate>({lat: 40.960505, lng: 29.190040, name: "DefaultCoordinates"})
     const [coordinates,     setCoordinates]     = useState<Coordinate[]>([]);
     const [posts,           setPosts]           = useState<PostInterface[]>([]);
 
     //Fetch data from server
-    useEffect(()=>{
+    const fetchData = async () => {
         axios.get(Conf.getEmergencies)
             .then((res) => {
-                const posts = res.data;
-                console.log(posts);
-                
-                setPosts(posts);
-                const recievedCoordinates: Coordinate[] = posts.map((post: PostInterface) => {
+                const data = res.data.data;
+
+                const recievedCoordinates : Coordinate[] = data.map((post: PostInterface) => {
                     return {
-                        lat:  post.location.lat,
-                        lng:  post.location.lng,
-                        name: post.name
+                        lat:  post.latitude,
+                        lng:  post.longitude,
+                        name: `${post.firstName}${post.lastName}${Math.random()}`
                     }
                 });
+
+                setPosts(data);
                 setCoordinates(recievedCoordinates);
             }).catch((err) => {
                 console.log(err);
             });
+    }
 
-        setPosts([
-            {
-                id:              1,
-                name:            "Jane Doe",
-                age:             26,
-                gender:          "Female",
-                height:          "1.75m",
-                bloodType:       "0RH-",
-                emergencyType:   "Fall Injury",
-                allergies:       ["Peanuts", "Lactose"],
-                ongoingDiseases: ["Diabetes", "Asthma"],
-                resourses:       ["image1", "image2", "image3"],
-                location:        {lat: 45.4046987, lng: 12.2472504}
-            },
-            {
-                id:              2,
-                name:            "Jane Doe",
-                age:             26,
-                gender:          "Female",
-                height:          "1.75m",
-                bloodType:       "0RH-",
-                emergencyType:   "Fall Injury",
-                allergies:       ["Peanuts", "Lactose"],
-                ongoingDiseases: ["Diabetes", "Asthma"],
-                resourses:       ["image1", "image2", "image3"],
-                location:        {lat: 45.4046987, lng: 12.2472504}
-            },
-            {
-                id:              3,
-                name:            "Jane Doe",
-                age:             26,
-                gender:          "Female",
-                height:          "1.75m",
-                bloodType:       "0RH-",
-                emergencyType:   "Fall Injury",
-                allergies:       ["Peanuts", "Lactose"],
-                ongoingDiseases: ["Diabetes", "Asthma"],
-                resourses:       ["image1", "image2", "image3"],
-                location:        {lat: 45.4046987, lng: 12.2472504}
-            },
-            {
-                id:              4,
-                name:            "Jane Doe",
-                age:             26,
-                gender:          "Female",
-                height:          "1.75m",
-                bloodType:       "0RH-",
-                emergencyType:   "Fall Injury",
-                allergies:       ["Peanuts", "Lactose"],
-                ongoingDiseases: ["Diabetes", "Asthma"],
-                resourses:       ["image1", "image2", "image3"],
-                location:        {lat: 45.4046987, lng: 12.2472504}
-            },
-            {
-                id:              5,
-                name:            "Jane Doe",
-                age:             26,
-                gender:          "Female",
-                height:          "1.75m",
-                bloodType:       "0RH-",
-                emergencyType:   "Fall Injury",
-                allergies:       ["Peanuts", "Lactose"],
-                ongoingDiseases: ["Diabetes", "Asthma"],
-                resourses:       ["image1", "image2", "image3"],
-                location:        {lat: 45.4046987, lng: 12.2472504}
-            }
-        ]);
+    useEffect(()=>{
+        fetchData();
     }, []);
     
-    const onGoogleApiLoaded = ({map}: any) => {
+    //Setting Ref
+    const onGoogleApiLoaded = ({map}: any) =>{
         mapRef.current = map;
     };
     
-    const onMarkerClick = (e:any, { markerId, lat, lng }: any) => {
-        console.log("Clicked: ", markerId);
-        setCurrCoordinates({lat, lng, name: markerId});
-	}
-    
-	const onMapChange = ({bounds, zoom}: any) => {
-		const ne = bounds.getNorthEast()
-		const sw = bounds.getSouthWest()
-		setMapBounds({ ...mapBounds, bounds: [sw.lng(), sw.lat(), ne.lng(), ne.lat()], zoom })
+    //Scroll to Marker
+    const scrollTo = (lat:number, lng:number) =>{
+        if (!mapRef.current) return;
+        const map = mapRef.current as unknown as google.maps.Map;
+        map.panTo({ lat, lng });
 	}
 
     return (
         <div className = "workPage">
-            <Sidebar posts = {posts}/>
+            <Sidebar posts = {posts} fetchData = {fetchData} seeOnMap = {scrollTo}/>
             <GoogleMap apiKey            = ""
-                       defaultCenter     = {{lat: currCoordinates.lat, lng: currCoordinates.lng}}
+                       defaultCenter     = {{lat: 40.960505, lng: 29.190040}}
                        defaultZoom       = {11}
                        options           = {mapOptions}
                        mapMinHeight      = "100vh"
-                       onGoogleApiLoaded = {onGoogleApiLoaded}
-                       onChange          = {onMapChange}>
+                       onGoogleApiLoaded = {onGoogleApiLoaded}>
 
                 {coordinates.map(({lat, lng, name}, index) => (
-                    <Marker key       = {index} 
-                            lat       = {lat} 
-                            lng       = {lng} 
-                            markerId  = {name} 
-                            onClick   = {onMarkerClick} 
-                            className = "marker"/>
+                    <Marker key          = {index} 
+                            lat          = {lat} 
+                            lng          = {lng} 
+                            markerId     = {name} 
+                            clickHandler = {scrollTo} 
+                            className    = "marker"/>
                 ))}
             </GoogleMap>
         </div>

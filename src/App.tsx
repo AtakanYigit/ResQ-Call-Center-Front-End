@@ -16,7 +16,6 @@ const App = () => {
                         <Route        path = "/ForgotPassword" exact component = {ForgotPasswordPage}/>
                         <Route        path = "/SignIn"         exact component = {SignInPage}/>
                         <PrivateRoute path = "/"               exact component = {WorkPage}/>
-                        {/* <PrivateRoute path = "/"               exact component = {WorkPage}/> */}
                     </Switch>
                 </div>
             </Router>

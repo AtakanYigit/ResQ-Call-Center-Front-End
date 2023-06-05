@@ -4,7 +4,8 @@ const Configurations = {
     signIn:         `${domain}/Auth/loginStaff`,
     forgotPassword: `${domain}/Auth/forgotPassword`,
     logout:         `${domain}/Auth/logout`,
-    getEmergencies: `${domain}/Post/getall`,
+    getEmergencies: `${domain}/Post/getpostdetails`,
+    cancelEmergency:`${domain}/Post/deletebyid`,
 }
 
 export default Configurations;
